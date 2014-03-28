@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
-cd src && python -m awesome_game/application $@
+cd `dirname $0`
+cd src
+python -m awesome_game/application $@
