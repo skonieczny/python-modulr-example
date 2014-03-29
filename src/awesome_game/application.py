@@ -26,7 +26,12 @@ def create_application():
     app.start()
     return app
 
-    
-if __name__ == "__main__":
+
+def run_application(arguments):
     app = create_application()
-    app.get_scripts_manager().run_script_from_argv(sys.argv)
+    app.get_scripts_manager().run_script_from_args(arguments)
+    return app
+
+
+if __name__ == "__main__":
+    run_application(sys.argv[1:])
