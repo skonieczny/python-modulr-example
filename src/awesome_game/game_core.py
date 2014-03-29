@@ -1,7 +1,7 @@
 from modulr.application import Component, simple_component_factory
 
 
-def game_core(context):
+def game_core_factory(context):
     
     class GameCore(Component):
         
@@ -13,9 +13,12 @@ def game_core(context):
             self._units[name] = kwargs
 
         def run_game_script(self, args):
-            print 'Let\'s play!'
+            self.run()
+            
+        def run(self):
+            print 'Let\'s play with units: {}'.format(self._units)
 
     return GameCore()
 
 
-game_core_component_factory = simple_component_factory(game_core, ['game_core'])
+game_core_component_factory = simple_component_factory(game_core_factory, ['game_core'])

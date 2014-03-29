@@ -1,7 +1,7 @@
 from modulr.application import Component, simple_component_factory
 
 
-def units(game_core):
+def units_factory(game_core):
     
     class Units(Component):
         
@@ -13,4 +13,4 @@ def units(game_core):
     return Units()
 
 
-units_component_factory = simple_component_factory(units, [])
+units_component_factory = simple_component_factory(units_factory, [])

@@ -2,4 +2,4 @@
 
 cd `dirname $0`
 cd src
-python -m awesome_game/application $@
+python -m awesome_game/application game_core:run
