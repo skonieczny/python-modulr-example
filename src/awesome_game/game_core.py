@@ -19,7 +19,7 @@ def game_core_factory(context):
             self.run()
             
         def run(self):
-            print 'Let\'s play with units: {}'.format(self._units)
+            print('Let\'s play with units: {}'.format(self._units))
 
     return GameCore()
 
