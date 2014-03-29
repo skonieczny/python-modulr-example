@@ -9,6 +9,9 @@ def game_core_factory(context):
             self._units = {}
             context.scripts_manager.register('game_core:run', self.run_game_script)
 
+        def get_units(self):
+            return self._units
+
         def register_unit(self, name, **kwargs):
             self._units[name] = kwargs
 
